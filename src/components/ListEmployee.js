@@ -7,6 +7,7 @@ import {
   BiEditAlt,
   BiChevronsUp,
   BiChevronsDown,
+  BiAnalyse,
 } from "react-icons/bi";
 import LocalSearch from "./LocalSearch";
 import { toast } from "react-toastify";
@@ -90,7 +91,11 @@ const ListEmployee = () => {
           <tbody>
             {employees.filter(searched(keyword)).map((emp) => (
               <tr key={emp.id}>
-                <td>{emp.firstName}</td>
+                <td>
+                  <Link className='list__user_info' to={"/employee/" + emp.id}>
+                    {emp.firstName}
+                  </Link>
+                </td>
                 <td>{emp.lastName}</td>
                 <td>{emp.email}</td>
                 <td className='list__td_continer'>
@@ -142,6 +147,16 @@ const StyledEmployeeList = styled.div`
   }
   tr:nth-child(even) {
     background-color: #f2f2f2;
+  }
+  a.list__user_info {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    color: #666666;
+    transition: 0.1s ease-in-out;
+    &:hover {
+      color: coral;
+    }
   }
   .list__update_button {
     text-decoration: none;

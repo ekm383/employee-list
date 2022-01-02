@@ -28,7 +28,7 @@ const StyledSearch = styled.div`
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #666666;
     font-size: 0.8rem;
     margin-bottom: 1rem;
     padding: 5px 0px;

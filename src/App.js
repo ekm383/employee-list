@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import ListEmployee from "./components/ListEmployee";
 import CreateEmployee from "./components/CreateEmployee";
 import UpdateEmployee from "./components/UpdateEmployee";
+import ViewEmployee from "./components/ViewEmployee";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact element={<ListEmployee />} path='/employees' />
         <Route exact element={<CreateEmployee />} path='/create-employee' />
         <Route exact element={<UpdateEmployee />} path='/update-employee/:id' />
+        <Route exact element={<ViewEmployee />} path='/employee/:id' />
       </Routes>
     </div>
   );
